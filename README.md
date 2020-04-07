@@ -44,19 +44,19 @@ Now, you can run **build-toolchain.sh** for start the build. The process should 
 $ ./buid-toolchain.sh
 ```
 
-For build the toolchain with the newlib, use the  `--with-newlib` argument:
+For build the toolchain with the newlib, use `--with-newlib` argument:
 
 ```bash
 $ ./build-toolchain.sh --with-newlib
 ```
 
-For build the toolchain with other processors of the Motrola 68000 family, use the `--with-cpu` argument:
+For build the toolchain with other processors of the Motrola 68000 family, use `--with-cpu` argument:
 
 ```bash
 $ ./build-toolchain.sh --with-cpu=68000,68030...
 ```
 
-For change the program prefix, use the `--program-prefix` argument:
+For change the program prefix, use `--program-prefix` argument:
 
 ```bash
 $ ./build-toolchain.sh --program-prefix=sega-genesis-
