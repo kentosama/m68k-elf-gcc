@@ -33,32 +33,32 @@ $ sudo dnf groupinstall "C Development Tools and Libraries"
 
 After, going into your workspace where you want build the toolchain (for example ~/workspace/source) and clone this repository:
 
-```shell
+```bash
 cd ~/workspace/source
 git clone https://github.com/kentosama/m68k-elf-gcc.git
 cd m68k-elf-gcc
 ```
 Now, you can run **build-toolchain.sh** for start the build. The process should take approximately 15 min or several hours depending on your computer. **Please, don't run this script as root!**
 
-```shell
+```bash
 $ ./buid-toolchain.sh
 ```
 
 For build the toolchain with the newlib, use the  ```--with-newlib``` argument:
 
-```shell
+```bash
 $ ./build-toolchain.sh --with-newlib
 ```
 
 For build the toolchain with other processors of the Motrola 68000 family, use the --with-cpu argument:
 
-```shell
+```bash
 $ ./build-toolchain.sh --with-cpu=68000,68030...
 ```
 
 For change the program prefix, use the --program-prefix argument:
 
-```shell
+```bash
 $ ./build-toolchain.sh --program-prefix=sega-genesis-
 ```
 
@@ -66,13 +66,13 @@ $ ./build-toolchain.sh --program-prefix=sega-genesis-
 
 Once the SH2 toolchain was successful built, you can process to the installation. Move or copy the "sh2-toolchain" folder in "/opt" or "/usr/local":
 
-```shell
+```bash
 $ sudo cp -R m68k-toolchain /opt
 ```
 
 If you want, add the SH2 toolchain to your path environment:
 
-```shell
+```bash
 $ echo export PATH="${PATH}:/opt/m68k-toolchain/bin" > ~/.bash_profile
 $ source ~/.bash_profile
 ```
@@ -85,7 +85,7 @@ $ m68k-elf-gcc -v
 
 The result should display something like this:
 
-```shell
+```bash
 Using built-in specs.
 COLLECT_GCC=./m68k-elf-gcc
 COLLECT_LTO_WRAPPER=/home/kentosama/Workspace/m68-elf-gcc/m68k-toolchain/libexec/gcc/m68k-elf/6.3.0/lto-wrapper
