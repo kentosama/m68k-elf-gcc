@@ -73,7 +73,7 @@ $ sudo cp -R m68k-toolchain /opt
 If you want, add the Motorola 68000 toolchain to your path environment:
 
 ```bash
-$ echo export PATH="${PATH}:/opt/m68k-toolchain/bin" > ~/.bashrc
+$ echo export PATH="${PATH}:/opt/m68k-toolchain/bin" >> ~/.bashrc
 $ source ~/.bash_profile
 ```
 
