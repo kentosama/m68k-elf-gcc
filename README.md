@@ -15,13 +15,13 @@ $ sudo pacman -S base-devel
 **Debian**
 ```bash
 $ sudo apt update
-$ sudo apt install build-essential
+$ sudo apt install build-essential textinfo
 ```
 
 **Ubuntu**
 ```bash
 $ sudo apt update
-$ sudo apt install build-essential
+$ sudo apt install build-essential textinfo
 ```
 
 **Fedora**
@@ -41,7 +41,7 @@ cd m68k-elf-gcc
 Now, you can run **build-toolchain.sh** for start the build. The process should take approximately 15 min or several hours depending on your computer. **Please, don't run this script as root!**
 
 ```bash
-$ ./buid-toolchain.sh
+$ ./build-toolchain.sh
 ```
 
 For build the toolchain with the newlib, use `--with-newlib` argument:
@@ -64,16 +64,16 @@ $ ./build-toolchain.sh --program-prefix=sega-genesis-
 
 ## Install
 
-Once the SH2 toolchain was successful built, you can process to the installation. Move or copy the "sh2-toolchain" folder in "/opt" or "/usr/local":
+Once the Motorola 68000 toolchain was successful built, you can process to the installation. Move or copy the "m68k-toolchain" folder in "/opt" or "/usr/local":
 
 ```bash
 $ sudo cp -R m68k-toolchain /opt
 ```
 
-If you want, add the SH2 toolchain to your path environment:
+If you want, add the Motorola 68000 toolchain to your path environment:
 
 ```bash
-$ echo export PATH="${PATH}:/opt/m68k-toolchain/bin" > ~/.bash_profile
+$ echo export PATH="${PATH}:/opt/m68k-toolchain/bin" > ~/.bashrc
 $ source ~/.bash_profile
 ```
 
