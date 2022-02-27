@@ -59,7 +59,7 @@ fi
                                     --disable-multilib \
                                     --enable-libssp \
                                     --enable-lto \
-                                    --enable-languages=c
+                                    --enable-languages=c \
                                     --program-prefix=${PROGRAM_PREFIX} \
                                     ${GOLD}
 
