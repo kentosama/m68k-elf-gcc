@@ -61,7 +61,7 @@ fi
                                     --enable-lto \
                                     --enable-languages=c
                                     --program-prefix=${PROGRAM_PREFIX} \
-                                    ${GOD}
+                                    ${GOLD}
 
 
 # build and install binutils
