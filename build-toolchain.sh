@@ -27,13 +27,13 @@ i=1
 
 for arg do
     if [[ "$arg" == "--with-newlib" ]]; then
-        ${BUILD_NEWLIB}="yes"
-        ${BUILD_GCC_STAGE_2}="yes"
+        BUILD_NEWLIB="yes"
+        BUILD_GCC_STAGE_2="yes"
         export WITH_NEWLIB="--with-newlib"
     elif [[ "$arg" == "--with-cpu=" ]]; then
-        ${CPU} = ${i}
+        CPU = ${i}
     elif [[ "$arg" == "--program-prefix=" ]]; then
-        ${PREFIX} = ${i}
+        PREFIX = ${i}
     fi
 
     i=$((i + 1))
