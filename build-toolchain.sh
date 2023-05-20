@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ###################################################################
 #Script Name	:   build-toolchain                                                                                            
@@ -40,11 +40,17 @@ for arg do
 done
 
 # Export
+if [ "$(uname)" = 'FreeBSD' ]; then
+    export MAKE="gmake"
+    export NUM_PROC=$(sysctl -n hw.ncpu)
+else
+    export MAKE="make"
+    export NUM_PROC=$(nproc)
+fi
 export ARCH=$(uname -m)
 export TARGET="m68k-elf"
 export BUILD_MACH="${ARCH}-pc-linux-gnu"
 export HOST_MACH="${ARCH}-pc-linux-gnu"
-export NUM_PROC=$(nproc)
 export PROGRAM_PREFIX=${PREFIX}
 export INSTALL_DIR="${PWD}/m68k-toolchain"
 export DOWNLOAD_DIR="${PWD}/download"
