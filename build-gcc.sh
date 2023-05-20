@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ###################################################################
 #Script Name	:   build-gcc                                                                                           
@@ -83,13 +83,13 @@ cd ${BUILD_DIR}/${DIR}
 
 
 # build and install gcc
-make -j${NUM_PROC} 2<&1 | tee build.log
+${MAKE} -j${NUM_PROC} 2<&1 | tee build.log
 
 # Install
 if [ $? -eq 0 ]; then
-    make install
-    make -j${NUM_PROC} all-target-libgcc
-    make install-target-libgcc
+    ${MAKE} install
+    ${MAKE} -j${NUM_PROC} all-target-libgcc
+    ${MAKE} install-target-libgcc
 fi
 
 
